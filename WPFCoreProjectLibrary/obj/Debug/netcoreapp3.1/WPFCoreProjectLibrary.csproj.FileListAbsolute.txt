@@ -1,0 +1,9 @@
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProjectLibrary\bin\Debug\netcoreapp3.1\WPFCoreProjectLibrary.deps.json
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProjectLibrary\bin\Debug\netcoreapp3.1\WPFCoreProjectLibrary.dll
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProjectLibrary\obj\Debug\netcoreapp3.1\WPFCoreProjectLibrary.csprojAssemblyReference.cache
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProjectLibrary\obj\Debug\netcoreapp3.1\WPFCoreProjectLibrary.AssemblyInfoInputs.cache
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProjectLibrary\obj\Debug\netcoreapp3.1\WPFCoreProjectLibrary.AssemblyInfo.cs
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProjectLibrary\bin\Debug\netcoreapp3.1\WPFCoreProjectLibrary.pdb
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProjectLibrary\obj\Debug\netcoreapp3.1\WPFCoreProjectLibrary.dll
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProjectLibrary\obj\Debug\netcoreapp3.1\WPFCoreProjectLibrary.pdb
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProjectLibrary\obj\Debug\netcoreapp3.1\WPFCoreProjectLibrary.csproj.CoreCompileInputs.cache

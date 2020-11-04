@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFCoreProjectUI", "WPFCoreProject\WPFCoreProjectUI.csproj", "{D380A120-0436-4B61-B5D1-A7B600011110}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFCoreProjectLibrary", "WPFCoreProjectLibrary\WPFCoreProjectLibrary.csproj", "{7BEC9700-ABEF-44E6-BA86-05EFF2E3456B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D380A120-0436-4B61-B5D1-A7B600011110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D380A120-0436-4B61-B5D1-A7B600011110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D380A120-0436-4B61-B5D1-A7B600011110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D380A120-0436-4B61-B5D1-A7B600011110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BEC9700-ABEF-44E6-BA86-05EFF2E3456B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BEC9700-ABEF-44E6-BA86-05EFF2E3456B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BEC9700-ABEF-44E6-BA86-05EFF2E3456B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BEC9700-ABEF-44E6-BA86-05EFF2E3456B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14023D03-FF01-45C4-99BE-A2BAE6FEC857}
+	EndGlobalSection
+EndGlobal
