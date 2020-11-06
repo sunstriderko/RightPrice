@@ -71,6 +71,58 @@ namespace WPFCoreProjectLibrary
 
             return similarItems;
         }
+
+        public List<Item> SearchByName(Item model)
+        {
+            List<Item> searchedByNameItems = new List<Item>();
+
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.CnnString("Auction")))
+            {
+                var a = new DynamicParameters();
+                a.Add("ItemName", model.ItemName);
+
+                searchedByNameItems = connection.Query<Item>("dbo.spItems_SearchByName", a, commandType: CommandType.StoredProcedure).ToList();
+
+            }
+
+            return searchedByNameItems;
+        }
+
+        public List<Item> GetByCategory(Item model)
+        {
+            List<Item> categoryItems = new List<Item>();
+
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.CnnString("Auction")))
+            {
+                var a = new DynamicParameters();
+
+                a.Add("ItemCategory", model.ItemCategory);
+
+                categoryItems = connection.Query<Item>("dbo.spItems_GetByCategory", a, commandType: CommandType.StoredProcedure).ToList();
+
+            }
+
+            return categoryItems;
+        }
+
+        public List<Item> GetByNameCategory(Item model)
+        {
+            List<Item> nameCategoryItems = new List<Item>();
+
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.CnnString("Auction")))
+            {
+                var a = new DynamicParameters();
+
+                a.Add("ItemName", model.ItemName);
+                a.Add("ItemCategory", model.ItemCategory);
+
+                nameCategoryItems = connection.Query<Item>("dbo.spItems_GetByNameCategory", a, commandType: CommandType.StoredProcedure).ToList();
+
+            }
+
+            return nameCategoryItems;
+        }
+
     }
 }
 

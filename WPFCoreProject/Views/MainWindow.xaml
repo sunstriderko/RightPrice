@@ -46,7 +46,7 @@
                 BorderBrush="#FFBAACAC" 
                 FontSize="22" 
                 FontWeight="Bold"
-                HorizontalAlignment="Left"
+                HorizontalAlignment="Left" Click="mainMenuSearchButton_Click"
                 >
 
             <Button.Resources>
@@ -140,13 +140,11 @@
                     Margin="0,0,0,0"
                     >
                 <TextBox x:Name="mainMenuAvgValueTextbox"
-                         Height="40"
-                         Width="120"
                          BorderBrush="Transparent"
                          Background="Transparent"
                          TextAlignment="Center"
                          VerticalAlignment="Center"
-                         FontSize="30"
+                         FontSize="22"
                          FontFamily="Microsoft YaHei UI"
                          Foreground="#FF770000"
                          MaxLength="6"
@@ -180,13 +178,11 @@
                     HorizontalAlignment="Right"
                     >
                 <TextBox x:Name="mainMenuMinValueTextbox"
-                         Height="40"
-                         Width="120"
                          BorderBrush="Transparent"
                          Background="Transparent"
                          TextAlignment="Center"
                          VerticalAlignment="Center"
-                         FontSize="30"
+                         FontSize="22"
                          FontFamily="Microsoft YaHei UI"
                          Foreground="#FF770000"
                          MaxLength="6"
@@ -220,13 +216,11 @@
                     HorizontalAlignment="Right"
                     >
                 <TextBox x:Name="mainMenuMaxValueTextbox"
-                         Height="40"
-                         Width="120"
                          BorderBrush="Transparent"
                          Background="Transparent"
                          TextAlignment="Center"
                          VerticalAlignment="Center"
-                         FontSize="30"
+                         FontSize="22"
                          FontFamily="Microsoft YaHei UI"
                          Foreground="#FF770000"   
                          MaxLength="6"
@@ -250,7 +244,7 @@
                      Foreground="#FF770000"
                      TextAlignment="Left"
                      VerticalAlignment="Center"
-                     FontSize="25"
+                     FontSize="22"
                      FontFamily="Microsoft YaHei UI"
                      FontStyle="Italic" GotFocus="mainMenuEnterNameHereTextBox_GotFocus" LostFocus="mainMenuEnterNameHereTextBox_LostFocus"
                      >
@@ -281,7 +275,7 @@
                      Foreground="#FF770000"
                      TextAlignment="Left"
                      VerticalAlignment="Center"
-                     FontSize="25"
+                     FontSize="22"
                      FontFamily="Microsoft YaHei UI"
                      FontStyle="Italic" GotFocus="mainMenuEnterCategoryHereTextBox_GotFocus" LostFocus="mainMenuEnterCategoryHereTextBox_LostFocus"
                      >

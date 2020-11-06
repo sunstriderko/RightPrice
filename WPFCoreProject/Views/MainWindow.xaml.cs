@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -37,11 +38,13 @@ namespace WPFCoreProject.Views
 
         }
 
-        public void UpdateData()
+        public void UpdateMainData()
         {
             mainMenuListBoxOne.ItemsSource = null;
             mainMenuListBoxOne.ItemsSource = auctionedItems;
             mainMenuListBoxOne.DisplayMemberPath = "ItemName";
+
+            mainMenuListBoxTwo.ItemsSource = null;
 
         }
 
@@ -49,7 +52,7 @@ namespace WPFCoreProject.Views
         {
             mainMenuListBoxTwo.ItemsSource = null;
             mainMenuListBoxTwo.ItemsSource = similarItemsList;
-            mainMenuListBoxTwo.DisplayMemberPath = "ItemName";
+            mainMenuListBoxTwo.DisplayMemberPath = "AuctionInfo";
         }
 
 
@@ -68,7 +71,7 @@ namespace WPFCoreProject.Views
         {
             auctionedItems.Add(item);
 
-            UpdateData();
+            UpdateMainData();
 
         }
 
@@ -78,7 +81,7 @@ namespace WPFCoreProject.Views
 
             auctionedItems = da.GetItems();
 
-            UpdateData();
+            UpdateMainData();
         }
 
         public void DataRemove(Item model)
@@ -87,6 +90,39 @@ namespace WPFCoreProject.Views
 
             da.RemoveItem(model);
 
+        }
+
+        public void ValueFiller()
+        {
+            List<Item> itemsForValues = new List<Item>();
+            Item currentElement = new Item();
+
+            currentElement = (Item)mainMenuListBoxOne.SelectedItem;
+
+            DataAccess da = new DataAccess();
+            itemsForValues = da.GetByName(currentElement);
+            int counter = itemsForValues.Count;
+
+            mainMenuMaxValueTextbox.Text = $"{(itemsForValues.First().ItemValue).ToString()}$";
+
+            mainMenuMinValueTextbox.Text = $"{itemsForValues[counter - 1].ItemValue.ToString()}$";
+
+            mainMenuAvgValueTextbox.Text = $"{ItemsValueInListCounter(itemsForValues).ToString()}$";
+
+        }
+
+        public int ItemsValueInListCounter(List<Item> model)
+        {
+            int counter = 0;
+
+            foreach (Item item in model)
+            {
+                counter += item.ItemValue;
+            }
+
+            counter = counter / model.Count;
+
+            return counter;
         }
 
         private void mainMenuRemoveButton_Click(object sender, RoutedEventArgs e)
@@ -98,9 +134,11 @@ namespace WPFCoreProject.Views
 
             DataRemove((Item)mainMenuListBoxOne.SelectedItem);
 
-            UpdateData();
+            UpdateMainData();
 
         }
+
+
 
         private void mainMenuEnterCategoryHereTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -140,6 +178,61 @@ namespace WPFCoreProject.Views
                 similarItemsList = da.GetByName(selectedItem);
 
                 UpdateSimilarData();
+
+                ValueFiller();
+            }
+        }
+
+        private void mainMenuSearchButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (!(mainMenuEnterCategoryHereTextBox.Text == "" || mainMenuEnterCategoryHereTextBox.Text == "Category") && (mainMenuEnterNameHereTextBox.Text == "" || mainMenuEnterNameHereTextBox.Text == "Name"))
+            {
+                Item sendedCategory = new Item();
+                sendedCategory.ItemCategory = mainMenuEnterCategoryHereTextBox.Text;
+
+                DataAccess da = new DataAccess();
+
+                auctionedItems = da.GetByCategory(sendedCategory);
+
+                UpdateMainData();
+
+            }
+
+            else if (!(mainMenuEnterNameHereTextBox.Text == "" || mainMenuEnterNameHereTextBox.Text == "Name") && (mainMenuEnterCategoryHereTextBox.Text == "" || mainMenuEnterCategoryHereTextBox.Text == "Category"))
+            {
+                Item sendedName = new Item();
+                sendedName.ItemName = mainMenuEnterNameHereTextBox.Text;
+
+                DataAccess da = new DataAccess();
+
+                auctionedItems = da.SearchByName(sendedName);
+
+                UpdateMainData();
+            }
+
+            else if (!(mainMenuEnterNameHereTextBox.Text == "" || mainMenuEnterNameHereTextBox.Text == "Name") && !(mainMenuEnterCategoryHereTextBox.Text == "" || mainMenuEnterCategoryHereTextBox.Text == "Category"))
+            {
+                Item sendedNameCategory = new Item();
+                sendedNameCategory.ItemName = mainMenuEnterNameHereTextBox.Text;
+                sendedNameCategory.ItemCategory = mainMenuEnterCategoryHereTextBox.Text;
+
+                DataAccess da = new DataAccess();
+
+                auctionedItems = da.GetByNameCategory(sendedNameCategory);
+
+                UpdateMainData();
+
+            }
+
+            else
+            {
+                DataAccess da = new DataAccess();
+
+                auctionedItems = da.GetItems();
+
+                UpdateMainData();
+
             }
         }
     }

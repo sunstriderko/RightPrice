@@ -11,5 +11,12 @@ namespace WPFCoreProject.Models
         public string ItemCategory { get; set; }
         public int Id { get; set; }
 
+        public string AuctionInfo
+        {
+            get
+            {
+                return $"{ItemName} {ItemValue}$";
+            }
+        }
     }
 }
