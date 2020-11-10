@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System.Linq;
 using System.Threading.Tasks.Dataflow;
+using WPFCoreProjectLibrary.Models;
 
 namespace WPFCoreProjectLibrary
 {
@@ -123,6 +124,42 @@ namespace WPFCoreProjectLibrary
             return nameCategoryItems;
         }
 
+        public User CreateUser(User model)
+        {
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.CnnString("Auction")))
+            {
+                var u = new DynamicParameters();
+
+                u.Add("Username", model.Username);
+                u.Add("Password", model.Password);
+                u.Add("@Id", 0, DbType.Int32, direction: ParameterDirection.Output);
+
+                connection.Execute("dbo.spUsers_CreateNew", u, commandType: CommandType.StoredProcedure);
+
+                model.Id = u.Get<int>("@Id");
+
+                return model;
+
+            }
+        }
+
+        public List<User> GetAvailibleUsers(User model)
+        {
+            List<User> availibleUser = new List<User>();
+
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.CnnString("Auction")))
+            {
+                var a = new DynamicParameters();
+
+                a.Add("Username", model.Username);
+                a.Add("Password", model.Password);
+
+                availibleUser = connection.Query<User>("dbo.spUsers_LoginProcess", a, commandType: CommandType.StoredProcedure).ToList();
+
+                return availibleUser;
+
+            }
+        }
     }
 }
 

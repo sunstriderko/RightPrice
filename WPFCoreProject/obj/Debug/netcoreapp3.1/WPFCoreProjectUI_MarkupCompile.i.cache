@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\App.xaml
-2-1948463563
+3352652532
 
-51888143916
+6-1377099078
 198964081599
-Views\AddNew.xaml;Views\MainWindow.xaml;
+Views\AddNew.xaml;Views\LoginScreen.xaml;Views\MainWindow.xaml;
 
-False
+True
 

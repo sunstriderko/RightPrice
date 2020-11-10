@@ -11,6 +11,7 @@
     <None Remove="Auction_house_background.jpg" />
     <None Remove="Auction_house_background.PNG" />
     <None Remove="logo.png" />
+    <None Remove="Views\logo_bazaar_new.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +24,7 @@
 
   <ItemGroup>
     <Resource Include="Pictures\Auction_house_background_2.jpg" />
+    <Resource Include="Pictures\logo_bazaar_new.jpg" />
   </ItemGroup>
 
 </Project>

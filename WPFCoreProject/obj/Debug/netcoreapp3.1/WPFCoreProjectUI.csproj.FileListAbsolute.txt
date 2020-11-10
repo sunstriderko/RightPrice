@@ -33,3 +33,5 @@ C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\bin\Debug\netcoreapp3.1\WP
 C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
 C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\obj\Debug\netcoreapp3.1\Views\LoginScreen.g.cs
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\obj\Debug\netcoreapp3.1\Views\LoginScreen.baml
