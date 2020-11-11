@@ -6,11 +6,15 @@ namespace WPFCoreProject.Models
 {
     public class Item
     {
-        public string ItemName { get; set; }
-        public int ItemValue { get; set; }
-        public string ItemCategory { get; set; }
         public int Id { get; set; }
-        public string CreatorId { get; set; }
+
+        public string ItemName { get; set; }
+
+        public int ItemValue { get; set; }
+
+        public string ItemCategory { get; set; }
+
+        public int CreatorId { get; set; }
 
         public string AuctionInfo
         {

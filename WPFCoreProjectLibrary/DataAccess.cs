@@ -17,21 +17,22 @@ namespace WPFCoreProjectLibrary
 {
     public class DataAccess
     {
-        public Item InsertAuction(Item model)
+        public Item InsertAuction(Item itemModel)
         {
             using (IDbConnection connection = new SqlConnection(GlobalConfig.CnnString("Auction")))
             {
                 var a = new DynamicParameters();
-                a.Add("ItemName", model.ItemName);
-                a.Add("ItemValue", model.ItemValue);
-                a.Add("ItemCategory", model.ItemCategory);
+                a.Add("ItemName", itemModel.ItemName);
+                a.Add("ItemValue", itemModel.ItemValue);
+                a.Add("ItemCategory", itemModel.ItemCategory);
+                a.Add("CreatorId", itemModel.CreatorId);
                 a.Add("@Id", 0, DbType.Int32, direction: ParameterDirection.Output);
 
                 connection.Execute("dbo.spItems_Insert", a, commandType: CommandType.StoredProcedure);
 
-                model.Id = a.Get<int>("@Id");
+                itemModel.Id = a.Get<int>("@Id");
 
-                return model;
+                return itemModel;
             }
         }
 
@@ -156,9 +157,9 @@ namespace WPFCoreProjectLibrary
 
                 availibleUser = connection.Query<User>("dbo.spUsers_LoginProcess", a, commandType: CommandType.StoredProcedure).ToList();
 
-                return availibleUser;
-
             }
+
+            return availibleUser;
         }
     }
 }

@@ -28,6 +28,8 @@ namespace WPFCoreProject.Views
         List<Item> auctionedItems = new List<Item>();
         List<Item> similarItemsList = new List<Item>();
 
+        User loggedUser = new User();
+
         public MainWindow(User model)
         {
             InitializeComponent();
@@ -36,8 +38,9 @@ namespace WPFCoreProject.Views
 
             DataGetter();
 
-            mainMenuLoggedUserTextbox.Text = model.Username;
+            loggedUser = model;
 
+            mainMenuLoggedUserTextbox.Text = loggedUser.Username.ToString();
 
         }
 
@@ -65,7 +68,7 @@ namespace WPFCoreProject.Views
 
         private void mainMenuAddNewButton_Click(object sender, RoutedEventArgs e)
         {
-            anw = new AddNew();
+            anw = new AddNew(loggedUser);
             anw.Show();
         }
 

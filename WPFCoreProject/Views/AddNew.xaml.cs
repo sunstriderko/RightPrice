@@ -13,6 +13,7 @@ using WPFCoreProject.Models;
 using WPFCoreProject.Views;
 using System.Linq;
 using WPFCoreProjectLibrary;
+using WPFCoreProjectLibrary.Models;
 
 namespace WPFCoreProject.Views
 {
@@ -23,9 +24,12 @@ namespace WPFCoreProject.Views
     {
         public Item newItem = new Item();
 
-        public AddNew()
+
+        public AddNew(User model)
         {
             InitializeComponent();
+
+            newItem.CreatorId = model.Id;
         }
 
         private void addNewExitButton_Click(object sender, RoutedEventArgs e)

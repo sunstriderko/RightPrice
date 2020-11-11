@@ -168,7 +168,7 @@
                     Height="30"
                     Margin="0,3,0,0"
                     >
-                <TextBox x:Name="loginScreenUsernameTextbox" Text="adam.cervenec@gmail.com" 
+                <TextBox x:Name="loginScreenUsernameTextbox"
                          Background="Transparent"
                          BorderBrush="Transparent"
                          FontSize="14"
