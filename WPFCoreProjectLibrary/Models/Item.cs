@@ -10,6 +10,7 @@ namespace WPFCoreProject.Models
         public int ItemValue { get; set; }
         public string ItemCategory { get; set; }
         public int Id { get; set; }
+        public string CreatorId { get; set; }
 
         public string AuctionInfo
         {

@@ -27,6 +27,7 @@ namespace WPFCoreProjectUI.Views
         public LoginScreen()
         {
             InitializeComponent();
+
         }
 
         private void loginScreenExitButton_Click(object sender, RoutedEventArgs e)
@@ -39,17 +40,16 @@ namespace WPFCoreProjectUI.Views
         {
             DataAccess da = new DataAccess();
 
-            User currentUser = new User();
-            List<User> currentUsers = new List<User>();
+            List<User> currentUser = new List<User>();
 
-            currentUser.Username = loginScreenUsernameTextbox.Text;
-            currentUser.Password = loginScreenPasswordPasswordbox.Password;
+            loggedUser.Username = loginScreenUsernameTextbox.Text;
+            loggedUser.Password = loginScreenPasswordPasswordbox.Password;
 
-            currentUsers = da.GetAvailibleUsers(currentUser);
+            currentUser = da.GetAvailibleUsers(loggedUser);
 
             try
             {
-                UserCreditabilityChecker(currentUsers);
+                UserCreditabilityChecker(currentUser);
 
             }
             catch (ArgumentNullException)
@@ -57,13 +57,6 @@ namespace WPFCoreProjectUI.Views
                 MessageBox.Show("Username or Password is invalid!", "Invalid input.", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
-            finally
-            {
-                MessageBox.Show("Try again or create a new account.", "Options", MessageBoxButton.OK);
-
-            }
-
-
         }
 
         private void loginScreenCreateNewButton_Click(object sender, RoutedEventArgs e)
@@ -83,6 +76,16 @@ namespace WPFCoreProjectUI.Views
             if (model.Count == 0)
             {
                 throw new ArgumentNullException();
+
+            }
+
+            else
+            {
+                mwls = new MainWindow(loggedUser);
+
+                mwls.Show();
+
+                this.Close();
 
             }
 

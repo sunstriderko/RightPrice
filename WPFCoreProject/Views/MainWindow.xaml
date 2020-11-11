@@ -148,6 +148,7 @@
                          FontFamily="Microsoft YaHei UI"
                          Foreground="#FF770000"
                          MaxLength="6"
+                         IsReadOnly="True"
                          >
                 </TextBox>
             </Border>
@@ -186,6 +187,7 @@
                          FontFamily="Microsoft YaHei UI"
                          Foreground="#FF770000"
                          MaxLength="6"
+                         IsReadOnly="True"
                          >
                 </TextBox>
             </Border>
@@ -224,6 +226,7 @@
                          FontFamily="Microsoft YaHei UI"
                          Foreground="#FF770000"   
                          MaxLength="6"
+                         IsReadOnly="True"
                          >
                 </TextBox>
             </Border>
@@ -352,6 +355,29 @@
                        FontWeight="Bold">
 
             </TextBlock>
+        </Border>
+
+        <Border     Grid.Row="0"
+                    Grid.Column="2"
+                    Height="30"
+                    Width="150"
+                    Background="#FFD38D0E"
+                    CornerRadius="15"
+                    HorizontalAlignment="Right"
+                    >
+            <TextBox x:Name="mainMenuLoggedUserTextbox"
+                         BorderBrush="Transparent"
+                         Background="Transparent"
+                         TextAlignment="Center"
+                         VerticalAlignment="Center"
+                         FontSize="15"
+                         FontFamily="Microsoft YaHei UI"
+                         Foreground="#FF770000"
+                         MaxLength="6"
+                         IsReadOnly="True"
+                     
+                         >
+            </TextBox>
         </Border>
 
     </Grid>

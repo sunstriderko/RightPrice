@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 using WPFCoreProject.Models;
 using WPFCoreProject.Views;
 using WPFCoreProjectLibrary;
-
+using WPFCoreProjectLibrary.Models;
 
 namespace WPFCoreProject.Views
 {
@@ -28,13 +28,16 @@ namespace WPFCoreProject.Views
         List<Item> auctionedItems = new List<Item>();
         List<Item> similarItemsList = new List<Item>();
 
-        public MainWindow()
+        public MainWindow(User model)
         {
             InitializeComponent();
 
             mw = this;
 
             DataGetter();
+
+            mainMenuLoggedUserTextbox.Text = model.Username;
+
 
         }
 
@@ -54,7 +57,6 @@ namespace WPFCoreProject.Views
             mainMenuListBoxTwo.ItemsSource = similarItemsList;
             mainMenuListBoxTwo.DisplayMemberPath = "AuctionInfo";
         }
-
 
         private void mainMenuExitButton_Click(object sender, RoutedEventArgs e)
         {
