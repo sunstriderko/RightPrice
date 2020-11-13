@@ -133,6 +133,8 @@ namespace WPFCoreProjectLibrary
 
                 u.Add("Username", model.Username);
                 u.Add("Password", model.Password);
+                u.Add("PhoneNumber", model.PhoneNumber);
+                u.Add("Email", model.Email);
                 u.Add("@Id", 0, DbType.Int32, direction: ParameterDirection.Output);
 
                 connection.Execute("dbo.spUsers_CreateNew", u, commandType: CommandType.StoredProcedure);
@@ -160,6 +162,23 @@ namespace WPFCoreProjectLibrary
             }
 
             return availibleUser;
+        }
+
+        public User GetContactInfo(Item model)
+        {
+            User userWithInfo = new User();
+
+            using (IDbConnection connection = new SqlConnection(GlobalConfig.CnnString("Auction")))
+            {
+                var u = new DynamicParameters();
+
+                u.Add("Id", model.CreatorId);
+
+                userWithInfo = connection.Query<User>("dbo.spUsers_GetContactInfo", u, commandType: CommandType.StoredProcedure).First();
+
+            }
+
+            return userWithInfo;
         }
     }
 }

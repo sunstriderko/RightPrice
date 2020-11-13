@@ -10,7 +10,13 @@
     <Compile Update="Views\AddNew.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ContactInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\LoginScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\NewUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -18,10 +24,16 @@
     <Page Update="Views\AddNew.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\ContactInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\LoginScreen.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\NewUser.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

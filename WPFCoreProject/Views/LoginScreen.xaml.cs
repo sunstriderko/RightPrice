@@ -22,6 +22,7 @@ namespace WPFCoreProjectUI.Views
     public partial class LoginScreen : Window
     {
         internal static MainWindow mwls;
+        internal static NewUser nuls;
 
         User loggedUser = new User();
 
@@ -62,13 +63,9 @@ namespace WPFCoreProjectUI.Views
 
         private void loginScreenCreateNewButton_Click(object sender, RoutedEventArgs e)
         {
-            DataAccess da = new DataAccess();
+            nuls = new NewUser();
+            nuls.Show();
 
-            User loggingUser = new User();
-            loggingUser.Username = loginScreenUsernameTextbox.Text;
-            loggingUser.Password = loginScreenPasswordPasswordbox.Password;
-
-            da.CreateUser(loggingUser);
 
         }
 

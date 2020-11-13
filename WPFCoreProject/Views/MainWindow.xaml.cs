@@ -17,6 +17,7 @@ using WPFCoreProject.Models;
 using WPFCoreProject.Views;
 using WPFCoreProjectLibrary;
 using WPFCoreProjectLibrary.Models;
+using WPFCoreProjectUI.Views;
 
 namespace WPFCoreProject.Views
 {
@@ -24,6 +25,7 @@ namespace WPFCoreProject.Views
     {
         internal static MainWindow mw;
         internal static AddNew anw;
+        internal static ContactInfo cimw;
 
         List<Item> auctionedItems = new List<Item>();
         List<Item> similarItemsList = new List<Item>();
@@ -239,6 +241,21 @@ namespace WPFCoreProject.Views
                 UpdateMainData();
 
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void mainWindowContactButton_Click(object sender, RoutedEventArgs e)
+        {
+            Item selectedItemToContact = new Item();
+            selectedItemToContact = (Item)mainMenuListBoxTwo.SelectedItem;
+
+            cimw = new ContactInfo(selectedItemToContact);
+            cimw.Show();
+
         }
     }
 }

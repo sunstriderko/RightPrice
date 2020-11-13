@@ -35,3 +35,7 @@ C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\bin\Debug\netcoreapp3.1\Mi
 C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\obj\Debug\netcoreapp3.1\Views\LoginScreen.g.cs
 C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\obj\Debug\netcoreapp3.1\Views\LoginScreen.baml
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\obj\Debug\netcoreapp3.1\Views\NewUser.g.cs
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\obj\Debug\netcoreapp3.1\Views\NewUser.baml
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\obj\Debug\netcoreapp3.1\Views\ContactInfo.g.cs
+C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\obj\Debug\netcoreapp3.1\Views\ContactInfo.baml

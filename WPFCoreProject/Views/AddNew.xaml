@@ -32,7 +32,7 @@
                 Grid.ColumnSpan="4"
                 CornerRadius="0,0,10,10">
             <Border.Background>
-                <ImageBrush Stretch="Fill"
+                <ImageBrush x:Name="addNewBackgroundImage" Stretch="Fill"
                             ImageSource="/Pictures/Auction_house_background_2.jpg">
 
                 </ImageBrush>

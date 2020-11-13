@@ -35,6 +35,7 @@ namespace WPFCoreProject.Views
         private void addNewExitButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+
         }
 
         private void addNewAddButton_Click(object sender, RoutedEventArgs e)

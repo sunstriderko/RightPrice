@@ -31,7 +31,7 @@
                 Grid.ColumnSpan="4"
                 CornerRadius="0,0,10,10">
             <Border.Background>
-                <ImageBrush Stretch="Fill" ImageSource="/Pictures/Auction_house_background_2.jpg"/>
+                <ImageBrush x:Name="mainWindowBackgroundImage" Stretch="Fill" ImageSource="/Pictures/Auction_house_background_2.jpg"/>
             </Border.Background>
         </Border>
 
@@ -49,6 +49,30 @@
                 HorizontalAlignment="Left" Click="mainMenuSearchButton_Click"
                 >
 
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Button.FontSize" Value="20"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="mainWindowContactButton" Grid.Row="4"
+                Grid.Column="1"
+                Background="#FF770000"
+                Foreground="#FFD38D0E"
+                Height="55"
+                Width="100"
+                BorderThickness="4"
+                Content="Contact"
+                BorderBrush="#FFBAACAC" 
+                FontSize="22" 
+                FontWeight="Bold"
+                HorizontalAlignment="Right" Click="mainWindowContactButton_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>

@@ -1,0 +1,214 @@
+﻿<Window x:Class="WPFCoreProjectUI.Views.NewUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCoreProjectUI.Views"
+        mc:Ignorable="d"
+        Title="NewUser" Height="300" Width="400"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.RowSpan="5"
+                Grid.ColumnSpan="4"
+                CornerRadius="0,0,10,10">
+            <Border.Background>
+                <ImageBrush x:Name="newUserBackgroundImage" Stretch="Fill" ImageSource="/Pictures/Auction_house_background_2.jpg"/>
+            </Border.Background>
+        </Border>
+
+        <StackPanel  Grid.Row="1"
+                     Grid.Column="1"
+                     Height="80"
+                     Grid.ColumnSpan="2"
+                     Width="180"
+                     HorizontalAlignment="Right">
+            <Border Background="#FFD38D0E"
+                    CornerRadius="8"
+                    BorderThickness="0"
+                    Height="30"
+                    Margin="0,3,0,0"
+                    >
+                <TextBox x:Name="newUserUsernameTextbox"
+                         Background="Transparent"
+                         BorderBrush="Transparent"
+                         FontSize="14"
+                         TextAlignment="Left"
+                         VerticalAlignment="Center"
+                         Foreground="#FF770000"
+                         FontFamily="Calibri">
+
+                </TextBox>
+            </Border>
+
+            <Border Height="30"
+                    Background="#FFD38D0E"
+                    CornerRadius="8"
+                    BorderThickness="0"
+                    Margin="0,7,0,0">
+                <PasswordBox x:Name="newUserPasswordbox"  
+                         Background="Transparent"
+                         BorderBrush="Transparent"
+                         FontSize="14"
+                         VerticalAlignment="Center">
+
+                </PasswordBox>
+            </Border>
+        </StackPanel>
+
+
+        <StackPanel  Grid.Row="2"
+                     Grid.Column="1"
+                     Height="80"
+                     Grid.ColumnSpan="2"
+                     Width="180"
+                     HorizontalAlignment="Right">
+            <Border Background="#FFD38D0E"
+                    CornerRadius="8"
+                    BorderThickness="0"
+                    Height="30"
+                    Margin="0,3,0,0"
+                    >
+                <TextBox x:Name="newUserEmailTextbox"
+                         Background="Transparent"
+                         BorderBrush="Transparent"
+                         FontSize="14"
+                         TextAlignment="Left"
+                         VerticalAlignment="Center"
+                         Foreground="#FF770000"
+                         FontFamily="Calibri">
+
+                </TextBox>
+            </Border>
+
+            <Border Height="30"
+                    Background="#FFD38D0E"
+                    CornerRadius="8"
+                    BorderThickness="0"
+                    Margin="0,7,0,0">
+                <TextBox x:Name="newUserPhoneNumberTextbox"  
+                         Background="Transparent"
+                         BorderBrush="Transparent"
+                         FontSize="14"
+                         TextAlignment="Left"
+                         VerticalAlignment="Center"
+                         Foreground="#FF770000"
+                         FontFamily="Calibri">
+
+                </TextBox>
+            </Border>
+        </StackPanel>
+
+        <StackPanel  Grid.Row="2"
+                     Grid.Column="1"
+                     Height="70">
+            <TextBlock Text="Email:"
+                       Foreground="#FFD38D0E"
+                       VerticalAlignment="Top"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       >
+
+            </TextBlock>
+
+            <TextBlock Text="Tel. Number:"
+                       Foreground="#FFD38D0E"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Margin="0,10,0,0"
+                       >
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel  Grid.Row="1"
+                     Grid.Column="1"
+                     Height="70">
+            <TextBlock Text="Username:"
+                       Foreground="#FFD38D0E"
+                       VerticalAlignment="Top"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       >
+
+            </TextBlock>
+
+            <TextBlock Text="Password:"
+                       Foreground="#FFD38D0E"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Margin="0,10,0,0"
+                       >
+            </TextBlock>
+        </StackPanel>
+
+        <Button x:Name="newUserExitButton" 
+                Grid.Row="0"
+                Grid.Column="3"
+                Background="#FF770000"
+                Foreground="#FFD38D0E"
+                Content="X"
+                BorderBrush="#FFD38D0E"
+                Height="22"
+                Width="22"
+                BorderThickness="2"
+                Margin="20,0,0,0" 
+                FontWeight="Bold" Click="newUserExitButton_Click"
+                >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20">
+
+                    </Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Border Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                >
+
+            <Button x:Name="newUserCreateButton" Content="Create"
+                    Width="100"
+                    Height="35"
+                    Background="#FF770000"
+                    Foreground="#FFD38D0E"
+                    BorderThickness="2.5"               
+                    BorderBrush="#FFBAACAC" 
+                    FontSize="13.5" 
+                    FontWeight="Bold"
+                    HorizontalAlignment="Center" Click="newUserCreateButton_Click" 
+                    >
+
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Button.FontSize" Value="10"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Border>
+    </Grid>
+</Window>
