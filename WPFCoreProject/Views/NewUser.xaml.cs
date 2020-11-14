@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -28,17 +29,29 @@ namespace WPFCoreProjectUI.Views
 
         private void newUserCreateButton_Click(object sender, RoutedEventArgs e)
         {
-            newUser.Username = newUserUsernameTextbox.Text;
-            newUser.Password = newUserPasswordbox.Password;
-            newUser.PhoneNumber = newUserPhoneNumberTextbox.Text;
-            newUser.Email = newUserEmailTextbox.Text;
 
-            DataAccess da = new DataAccess();
+            bool validEmail = newUserEmailTextbox.Text.Contains('@');
 
-            da.CreateUser(newUser);
+            if (validEmail)
+            {
+                newUser.Username = newUserUsernameTextbox.Text;
+                newUser.Password = newUserPasswordbox.Password;
+                newUser.PhoneNumber = newUserPhoneNumberTextbox.Text;
+                newUser.Email = newUserEmailTextbox.Text;
 
-            this.Close();
+                DataAccess da = new DataAccess();
 
+                da.CreateUser(newUser);
+
+                this.Close();
+
+            }
+
+            else
+            {
+                MessageBox.Show("Invalid email format", "Invalid input!", MessageBoxButton.OK);
+
+            }
         }
 
         private void newUserExitButton_Click(object sender, RoutedEventArgs e)

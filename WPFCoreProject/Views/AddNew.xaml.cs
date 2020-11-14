@@ -39,17 +39,32 @@ namespace WPFCoreProject.Views
         }
 
         private void addNewAddButton_Click(object sender, RoutedEventArgs e)
-        {            
-            newItem.ItemName = addNewNameTextBox.Text;
-            newItem.ItemValue = Int32.Parse(addNewPriceTextBox.Text);
-            newItem.ItemCategory = addNewCategoryTextBox.Text;
+        {
+            int value = 0;
+            bool valueTest = Int32.TryParse(addNewPriceTextBox.Text, out value);
 
-            DataAccess da = new DataAccess();
-            da.InsertAuction(newItem);
+            if (valueTest)
+            {                
+                newItem.ItemCategory = addNewCategoryTextBox.Text;
+                newItem.ItemName = addNewNameTextBox.Text;
+                newItem.ItemValue = value;
 
-            MainWindow.mw.AddNewItem(newItem);
+                DataAccess da = new DataAccess();
+                da.InsertAuction(newItem);
 
-            this.Close();
+                MainWindow.mw.AddNewItem(newItem);
+
+                this.Close();
+
+            }
+
+            else
+            {
+                MessageBox.Show("Enter valid value!", "Invalid input!", MessageBoxButton.OK);
+
+            }
+
+
         }
 
         private void addNewNameTextBox_GotFocus(object sender, RoutedEventArgs e)

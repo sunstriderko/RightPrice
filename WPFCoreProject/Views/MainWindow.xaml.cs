@@ -135,14 +135,34 @@ namespace WPFCoreProject.Views
         private void mainMenuRemoveButton_Click(object sender, RoutedEventArgs e)
         {
             Item itemToBeRemoved = new Item();
-            itemToBeRemoved = (Item)mainMenuListBoxOne.SelectedItem;
+           
+            itemToBeRemoved = (Item)mainMenuListBoxTwo.SelectedItem;
 
-            auctionedItems.Remove(itemToBeRemoved);
+            if (mainMenuListBoxTwo.SelectedItem != null)
+            {
+                if (itemToBeRemoved.CreatorId == loggedUser.Id)
+                {                  
+                    auctionedItems.Remove((Item)mainMenuListBoxOne.SelectedItem);
 
-            DataRemove((Item)mainMenuListBoxOne.SelectedItem);
+                    DataRemove((Item)mainMenuListBoxTwo.SelectedItem);
 
-            UpdateMainData();
+                    UpdateMainData();
 
+                }
+
+                else
+                {
+                    MessageBox.Show("You are not the creator of this item!", "Invalid user!", MessageBoxButton.OK);
+
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("You have to select an item!", "Invalid input", MessageBoxButton.OK);
+
+            }
+           
         }
 
 
@@ -243,19 +263,23 @@ namespace WPFCoreProject.Views
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void mainWindowContactButton_Click(object sender, RoutedEventArgs e)
         {
             Item selectedItemToContact = new Item();
-            selectedItemToContact = (Item)mainMenuListBoxTwo.SelectedItem;
 
-            cimw = new ContactInfo(selectedItemToContact);
-            cimw.Show();
+            if (mainMenuListBoxTwo.SelectedItem != null)
+            {
+                selectedItemToContact = (Item)mainMenuListBoxTwo.SelectedItem;
 
+                cimw = new ContactInfo(selectedItemToContact);
+                cimw.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("Nothing is selected!", "Invalid input", MessageBoxButton.OK);
+
+            }
         }
     }
 }
