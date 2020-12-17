@@ -330,7 +330,13 @@
                      BorderBrush="Transparent"
                      Foreground="Black"
                      FontSize="15" SelectionChanged="mainMenuListBoxOne_SelectionChanged"
-                     />
+                     >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding ItemName}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </Border>
 
         <Border Grid.Column="2"
@@ -340,6 +346,17 @@
                      Background="#FFECBF6D"
                      Foreground="Black"
                      FontSize="15">
+
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding ItemName}"/>
+                            <TextBlock Text=" "/>
+                            <TextBlock Text="{Binding ItemValue}"/>
+                            <TextBlock Text="$"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
 
             </ListBox>
         </Border>

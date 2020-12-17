@@ -25,6 +25,7 @@ namespace WPFCoreProjectUI.Views
         public NewUser()
         {
             InitializeComponent();
+
         }
 
         private void newUserCreateButton_Click(object sender, RoutedEventArgs e)

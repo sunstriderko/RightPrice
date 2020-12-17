@@ -1,5 +1,5 @@
 ﻿WPFCoreProjectUI
-
+1.0.0.0
 
 winexe
 C#
@@ -8,11 +8,11 @@ C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\obj\Debug\netcoreapp3.1\
 WPFCoreProjectUI
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\adamc\source\repos\RightPrice\WPFCoreProject\App.xaml
 51137246218
 
-81211450066
+9836114086
 198964081599
 Views\AddNew.xaml;Views\ContactInfo.xaml;Views\LoginScreen.xaml;Views\MainWindow.xaml;Views\NewUser.xaml;
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6jfXLit6A0EvVlR6qXi0xOHrCrvIS43Q/Lf0aRsmHoLIUCqNnOPxXKHXx+F+q8toFm+xZHAo/nZovHBejBjz5Q==",
+  "dgSpecHash": "475pvCe+94QJZ3DvI5Jijav8FNtlTgiKOpPr7wpC6HWlqwcfy/oh3TT5zVAtWmx6gvb9SCHKj5vn7OfjfU6ICg==",
   "success": true,
   "projectFilePath": "C:\\Users\\adamc\\source\\repos\\RightPrice\\WPFCoreProject\\WPFCoreProjectUI.csproj",
   "expectedPackageFiles": [
@@ -23,7 +23,9 @@
     "C:\\Users\\adamc\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
     "C:\\Users\\adamc\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\adamc\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\adamc\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\adamc\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\adamc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\adamc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

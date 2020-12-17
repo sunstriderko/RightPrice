@@ -50,7 +50,7 @@ namespace WPFCoreProject.Views
         {
             mainMenuListBoxOne.ItemsSource = null;
             mainMenuListBoxOne.ItemsSource = auctionedItems;
-            mainMenuListBoxOne.DisplayMemberPath = "ItemName";
+            //mainMenuListBoxOne.DisplayMemberPath = "ItemName";
 
             mainMenuListBoxTwo.ItemsSource = null;
 
@@ -60,7 +60,7 @@ namespace WPFCoreProject.Views
         {
             mainMenuListBoxTwo.ItemsSource = null;
             mainMenuListBoxTwo.ItemsSource = similarItemsList;
-            mainMenuListBoxTwo.DisplayMemberPath = "AuctionInfo";
+            //mainMenuListBoxTwo.DisplayMemberPath = "AuctionInfo";
         }
 
         private void mainMenuExitButton_Click(object sender, RoutedEventArgs e)
