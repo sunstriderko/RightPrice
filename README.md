@@ -9,4 +9,4 @@ I also practiced creating frontend of the application with xaml.
 
 This project is finished. I can still fix a bug if I find one.
 
-This application will not work or any PC due to SQL database being on my local PC!
+This application will not work or any PC due to SQL database working only on local PCs!
