@@ -10,3 +10,7 @@ I also practiced creating frontend of the application with xaml.
 This project is finished. I can still fix a bug if I find one.
 
 This application will not work or any PC due to SQL database working only on local PCs!
+
+Little showcase:
+
+![Alt Text](https://media.giphy.com/media/kgaGHkuCawReTso5P0/giphy.gif)
